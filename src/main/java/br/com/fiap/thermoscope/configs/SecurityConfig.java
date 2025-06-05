@@ -55,7 +55,7 @@ public class SecurityConfig {
 
 
     @Bean
-    public SecurityFilterChain securityFilterChain(HttpSecurity http, CustomAccessDeniedHandler customAccessDeniedHandler) throws Exception {
+    public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         return http.csrf(AbstractHttpConfigurer::disable)
                 .headers(headers -> headers.frameOptions(HeadersConfigurer.FrameOptionsConfig::sameOrigin))
                 .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
@@ -63,9 +63,6 @@ public class SecurityConfig {
                         .requestMatchers(PATH_WHITELIST).permitAll()
                         .requestMatchers(HttpMethod.POST, "/users").permitAll()
                         .anyRequest().authenticated())
-                .exceptionHandling(exception -> exception
-                        .accessDeniedHandler(customAccessDeniedHandler)
-                )
                 .addFilterBefore(jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class)
                 .build();
     }
