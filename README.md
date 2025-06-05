@@ -1,4 +1,4 @@
-# GS Queimadas
+# GS Queimadas - Thermoscope
 
 ## Descrição
 
@@ -36,7 +36,7 @@ Spring Boot como trabalho acadêmico.
 A documentação interativa da API está disponível através do SpringDoc OpenAPI (Swagger UI). Para acessar:
 
 1. Execute a aplicação
-2. Acesse: [http://localhost:8080/swagger-ui/index.html](http://localhost:8080/swagger-ui.html)
+2. Acesse: [http://localhost:8080/swagger-ui/index.html](http://localhost:8080/swagger-ui/index.html)
 
 ## Banco de Dados H2
 
@@ -159,13 +159,13 @@ CREATE INDEX idx_incident_status ON incidents (status);
 1. Clone o repositório:
 
 ```bash
-  git clone https://github.com/Gabriel-Leao/java-challenge-ancora
+  git clone https://github.com/Gabriel-Leao/gs-thermoscope.git
 ```
 
 2. Navegue até o diretório do projeto:
 
 ```bash
-  cd java-challenge-ancora
+  cd gs-thermoscope
 ```
 
 3. Execute a aplicação com o Maven:
@@ -191,4 +191,3 @@ Este projeto está licenciado sob a licença MIT. Veja o arquivo LICENSE para ma
  <p>Vinicius Issa Gois - RM 553814</p>
  <p>Gabriel Leão - RM 552642</p>
 </div>
-# gs-thermoscope
